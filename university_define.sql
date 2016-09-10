@@ -2,7 +2,7 @@
 */
 
 
-USE toni_university;
+USE toni_university; /* change name for running script */
 
 DROP TABLE IF EXISTS person, course, class_section, enrollment, prerequisite;
 
