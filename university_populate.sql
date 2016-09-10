@@ -2,7 +2,7 @@
 
 use /* your database name */;
 
-/*Populates person table. When I did my database I added Bio as a major. I don't know if you guys whant to stick with that
+/*Populates person table with 100 random names. When I did my database I added Bio as a major. I don't know if you guys whant to stick with that
 or you gauys want to change it. My other tables also have bio classes and bio sections, including the enrollment table. 
 -- jorge
 */
