@@ -20,6 +20,6 @@ CREATE TABLE course
 (
 course_number VARCHAR(8), 
 course_name VARCHAR(25), 
-credit_hours char(1), 
+credit_hours INT, 
 department VARCHAR(10), 
 PRIMARY KEY(course_number));
