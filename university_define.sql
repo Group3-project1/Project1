@@ -32,14 +32,14 @@ semester varchar(10),
 year varchar(4), 
 instructor_id int(9), 
 primary key(section_identifier), 
-foreign key(instructor_id) references persons(ID));
+foreign key(instructor_id) references person(ID));
 
 CREATE TABLE enrollment --jorge
 (
 student_id int(9), 
 section_identifier int(10),
 grade char(3), 
-foreign key(student_id) references persons(ID),
+foreign key(student_id) references person(ID),
 foreign key(section_identifier) references section(section_identifier));
 
 CREATE TABLE prerequisite --jorge
