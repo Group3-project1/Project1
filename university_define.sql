@@ -26,7 +26,7 @@ PRIMARY KEY(course_number));
 
 CREATE TABLE class_section --jorge
 (
-section_identifier int(10), 
+section_identifier INT NOT NULL AUTO_INCREMENT, 
 course_number varchar(15), 
 semester varchar(10), 
 year varchar(4), 
