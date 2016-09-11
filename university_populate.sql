@@ -31,26 +31,31 @@ INSERT INTO section(course_number, semester, year, instructor_id) VALUES(“CS13
 
 --Populate enrollment table(Jorge)
 
-INSERT INTO enrollment(student_id, section_identifier, grade) VALUES(65, 10, 'A'), (53, 3, 'C'),  (12, 10, 'C'), (38, 1, 'C'),
-(83, 1, 'A'), (75, 1, 'B'), (59, 6, 'B'), (12, 6, 'C'), (49, 6, 'F'), (5, 10, 'C'), (74, 10, 'B'), (60, 9, 'B'), (76, 4, 'B'), 
-(96, 5, 'B'), (98, 10, 'A'), (1, 9, 'C'), (78, 1, 'A'), (18, 11, 'A'), (86, 11, 'C'), (10, 7, 'C'), (59, 7, 'B'),  (78, 3, 'F'), 
-(57, 9, 'C'), (56, 11, 'A'), (54, 10, 'B'), (57, 7, 'C'), (9, 11, 'F'), (25, 9, 'D'), (76, 2, 'B'), (29, 12, 'D'), (32, 2, 'C'), 
-(29, 4, 'A'), (16, 6, 'D'), (95, 11, 'C'), (57, 9, 'C'), (33, 8, 'C'),  (26, 8, 'F'), (82, 4, 'D'), (74, 10, 'B'), (93, 7, 'B'), 
-(64, 8, 'C'), (66, 2, 'B'), (9, 3, 'A'), (68, 7, 'A'), (50, 10, 'B'), (63, 2, 'C'), (4, 5, 'C'), (18, 2, 'D'), (62, 1, 'C'), 
-(49, 9, 'D'), (54, 7, 'B'), (80, 5, 'C'), (18, 5, 'C'), (25, 12, 'A'), (22, 1, 'B'), (89, 3, 'B'), (9, 11, 'F'), (4, 4, 'D'), 
-(89, 10, 'A'), (65, 11, 'B'), (5, 7, 'B'), (61, 2, 'C'), (77, 6, 'A'), (53, 1, 'A'), (30, 5, 'C'), (32, 1, 'B'), (4, 10, 'F'), 
-(62, 6, 'D'), (69, 1, 'B'), (25, 6, 'A'), (55, 9, 'A'), (86, 5, 'C'), (79, 9, 'C'), (49, 7, 'C'), (48, 3, 'B'), (42, 7, 'C'), 
-(4, 6, 'A'), (53, 5, 'B'), (66, 6, 'A'), (4, 9, 'D'), (80, 2, 'C'), (4, 3, 'C'), (18, 2, 'B'), (53, 2, 'C'), (52, 11, 'D'), 
-(68, 9, 'F'), (20, 1, 'A'), (63, 2, 'B'), (1, 8, 'A'), (59, 10, 'B'), (45, 1, 'C'), (83, 5, 'C'), (59, 4, 'B'), (31, 11, 'C'), 
-(66, 10, 'C'), (81, 7, 'D'), (53, 7, 'F'), (61, 11, 'B'), (46, 10, 'A'), (86, 2, 'C');
+INSERT INTO enrollment(student_id, section_identifier, grade) VALUES(111065, 10, 'A'), (111053, 3, 'C'),  (111012, 10, 'C'), 
+(111038, 1, 'C'), (111083, 1, 'A'), (111075, 1, 'B'), (111059, 6, 'B'), (111012, 6, 'C'), (111049, 6, 'F'), (111005, 10, 'C'), 
+(111074, 10, 'B'), (111060, 9, 'B'), (111076, 4, 'B'), (111096, 5, 'B'), (111098, 10, 'A'), (111001, 9, 'C'), (111078, 1, 'A'), 
+(111018, 11, 'A'), (111086, 11, 'C'), (111010, 7, 'C'), (111059, 7, 'B'),  (111078, 3, 'F'), (111057, 9, 'C'), (111056, 11, 'A'),
+(111054, 10, 'B'), (111057, 7, 'C'), (111009, 11, 'F'), (111025, 9, 'D'), (111076, 2, 'B'), (111029, 12, 'D'), (111032, 2, 'C'),
+(111029, 4, 'A'), (111016, 6, 'D'), (111095, 11, 'C'), (111057, 9, 'C'), (111033, 8, 'C'),  (111026, 8, 'F'), (111082, 4, 'D'),
+(111074, 10, 'B'), (111093, 7, 'B'), (111064, 8, 'C'), (111066, 2, 'B'), (111009, 3, 'A'), (111068, 7, 'A'), (111050, 10, 'B'),
+(111063, 2, 'C'), (111004, 5, 'C'), (111018, 2, 'D'), (111062, 1, 'C'), (111049, 9, 'D'), (111054, 7, 'B'), (111080, 5, 'C'),
+(111018, 5, 'C'), (111025, 12, 'A'), (111022, 1, 'B'), (111089, 3, 'B'), (111009, 11, 'F'), (111004, 4, 'D'), (111089, 10, 'A'),
+(111065, 11, 'B'), (111005, 7, 'B'), (111061, 2, 'C'), (111077, 6, 'A'), (111053, 1, 'A'), (111030, 5, 'C'), (111032, 1, 'B'),
+(11104, 10, 'F'), (111062, 6, 'D'), (111069, 1, 'B'), (111025, 6, 'A'), (111055, 9, 'A'), (111086, 5, 'C'), (111079, 9, 'C'),
+(111049, 7, 'C'), (111048, 3, 'B'), (111042, 7, 'C'), (11104, 6, 'A'), (111053, 5, 'B'), (111066, 6, 'A'), (111004, 9, 'D'),
+(111080, 2, 'C'), (111004, 3, 'C'), (111018, 2, 'B'), (111053, 2, 'C'), (111052, 11, 'D'), (111068, 9, 'F'), (111020, 1, 'A'),
+(111063, 2, 'B'), (111001, 8, 'A'), (111059, 10, 'B'), (111045, 1, 'C'), (111083, 5, 'C'), (111059, 4, 'B'), (111031, 11, 'C'),
+(111066, 10, 'C'), (111081, 7, 'D'), (111053, 7, 'F'), (111061, 11, 'B'), (111046, 10, 'A'), (111086, 2, 'C');
 
---Update Statements so there are no duplicates students in a section. Since I generated everything randomly there where some duplicates.
-UPDATE enrollment SET student_id=95 WHERE student_id=63 LIMIT 1;
-UPDATE enrollment SET student_id=57 WHERE student_id=18 LIMIT 1;
-UPDATE enrollment SET student_id=3 WHERE student_id=4 LIMIT 1;
-UPDATE enrollment SET student_id=89 WHERE student_id=57 AND section_identifier=9 LIMIT 1;
-UPDATE enrollment SET student_id=24 WHERE student_id=74 AND section_identifier=10 LIMIT 1;
-UPDATE enrollment SET student_id=21 WHERE student_id=46 AND section_identifier=10 LIMIT 1;
+/*Update Statements so there are no duplicates students in a section. Since I generated everything randomly there where 
+some duplicates and some profesors where enroll*/
+
+UPDATE enrollment SET student_id=111095 WHERE student_id=111063 LIMIT 1;
+UPDATE enrollment SET student_id=111057 WHERE student_id=111018 LIMIT 1;
+UPDATE enrollment SET student_id=111003 WHERE student_id=111004 LIMIT 1;
+UPDATE enrollment SET student_id=111089 WHERE student_id=111057 AND section_identifier=9 LIMIT 1;
+UPDATE enrollment SET student_id=111024 WHERE student_id=111074 AND section_identifier=10 LIMIT 1;
+UPDATE enrollment SET student_id=111021 WHERE student_id=111046 AND section_identifier=10 LIMIT 1;
 
 --Populate prerequisite Table
 
