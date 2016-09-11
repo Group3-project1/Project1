@@ -6,7 +6,15 @@ use /* your database name */;
 or you gauys want to change it. My other tables also have bio classes and bio sections, including the enrollment table. 
 -- jorge
 */
-INSERT INTO person(FName_LName, major, class_standing) VALUES -- the open and close quotes on the numbers were creating a syntax error.
+
+
+use toni_university/* your database name */;
+
+/*Populates person table with 100 random names. When I did my database I added Bio as a major. I don't know if you guys whant to stick with that
+or you gauys want to change it. My other tables also have bio classes and bio sections, including the enrollment table. 
+-- jorge
+*/
+INSERT INTO person(FName_LName, major, class_standing) VALUES 
 ("Hugo Nash", "CS", '01'), 
 ("Betsy Stone", "MATH", '01'), 
 ("Eileen Neal", "CS", '02'), 
@@ -101,16 +109,16 @@ INSERT INTO person(FName_LName, major, class_standing) VALUES -- the open and cl
 ("Linda Frazier", "BIO", '03'), 
 ("Maurice Watkins", "CS", '04'), 
 ("Salvatore Vega", "CS", '02'), 
-("Kathleen Todd", "CS”, '02' ), 
+("Kathleen Todd", "CS", '02'), 
 ("Kate Ward", "MATH", '01'), 
 ("Gabriel Daniels", "MATH", '02'), 
 ("Jessie Becker", "MATH", '03'), 
 ("Casey Chavez", "BIO", '04'), 
 ("Brent Briggs", "BIO", '02');
 
-UPDATE person SET major=null WHERE class_standing='00';
+UPDATE person SET major=' ' WHERE class_standing='00';
+UPDATE person SET class_standing ='Instructor' WHERE class_standing='00';
 
---Poplulates course table
 INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
 ('CS1310', 'Intro to Computer Science', '4', 'CS'),
 ('CS3320', 'Data Structures', '4', 'CS'),
@@ -119,17 +127,11 @@ INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
 ('BIO1210', 'Intro to Biology', '4', 'BIO'), 
 ('BIO3310', 'Genetics', '4', 'BIO');
 
-
---Toni I edited your course table so it matches with the data that I have for the enrollment and section table. Jorge
-
---Populate section table (Jorge)
-INSERT INTO class_section(course_number, semester, year, instructor_id) VALUES
-(“CS1310”, “Fall”, “2016”, 111070), (“CS1310”, “Fall”, “2016”, 111085), (“CS3320”, “Fall”, “2016”, 111011), 
-(“CS3320”, “Spring”, “2017”, 111011), (“MATH2410”, “Fall”, “2016”, 111046), (“MATH2410”, “Fall”, “2016”, 111039),
-(“MATH2411”, “Fall”, “2016”, 111084), (“MATH2411”, “Spring”, “2017”, 111084), (“BIO1210”, “Fall”, “2016”, 111023), 
-(“BIO1210”, “Spring”, “2017”, 111023), (“BIO3310”, “Fall”, “2016”, 111073), (“BIO3310”, “Fall”, “2016”, 111072);
-
---Populate enrollment table(Jorge)
+INSERT INTO class_section(course_numb, semester, year, instructor_id) VALUES
+('CS1310', 'Fall', '2016', 111070), ('CS1310', 'Fall', '2016', 111085), ('CS3320', 'Fall', '2016', 111011), 
+('CS3320', 'Spring', '2017', 111011), ('MATH2410', 'Fall', '2016', 111046), ('MATH2410', 'Fall', '2016', 111039),
+('MATH2411', 'Fall', '2016', 111084), ('MATH2411', 'Spring', '2017', 111084), ('BIO1210', 'Fall', '2016', 111023), 
+('BIO1210', 'Spring', '2017', 111023), ('BIO3310', 'Fall', '2016', 111073), ('BIO3310', 'Fall', '2016', 111072);
 
 INSERT INTO enrollment(student_id, section_identifier, grade) VALUES(111065, 10, 'A'), (111053, 3, 'C'),  (111012, 10, 'C'), 
 (111038, 1, 'C'), (111083, 1, 'A'), (111075, 1, 'B'), (111059, 6, 'B'), (111012, 6, 'C'), (111049, 6, 'F'), (111005, 10, 'C'), 
@@ -157,6 +159,5 @@ UPDATE enrollment SET student_id=111089 WHERE student_id=111057 AND section_iden
 UPDATE enrollment SET student_id=111024 WHERE student_id=111074 AND section_identifier=10 LIMIT 1;
 UPDATE enrollment SET student_id=111021 WHERE student_id=111046 AND section_identifier=10 LIMIT 1;
 
---Populate prerequisite Table (jorge)
+INSERT INTO prerequisite(course_number, prerequisite_number) VALUES('BIO3310', 'BIO1210'), ('CS3320', 'CS1310');
 
-INSERT INTO prerequisite(course_number, prerequisite_number) VALUES(“BIO3310”, “BIO1210”), (“CS3320”, “CS1310”);
