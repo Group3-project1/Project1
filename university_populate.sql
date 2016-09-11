@@ -57,6 +57,6 @@ UPDATE enrollment SET student_id=111089 WHERE student_id=111057 AND section_iden
 UPDATE enrollment SET student_id=111024 WHERE student_id=111074 AND section_identifier=10 LIMIT 1;
 UPDATE enrollment SET student_id=111021 WHERE student_id=111046 AND section_identifier=10 LIMIT 1;
 
---Populate prerequisite Table
+--Populate prerequisite Table (jorge)
 
 INSERT INTO prereq(course_number, prerequisite_number) VALUES(“BIO3310”, “BIO1210”), (“CS3320”, “CS1310”)
