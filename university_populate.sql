@@ -15,7 +15,7 @@ INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
 ('CS1310', 'Intro to Computer Science', 4, 'CS'),
 ('CS3320', 'Data Structures', 4, 'CS'),
 ('MATH2410', 'Discrete Mathematics', 4, 'MATH'),
-('MATH2411', 'Linear Algebra', 4, 'MATH');
+('MATH2411', 'Linear Algebra', 4, 'MATH'),
 ('BIO1210', 'Intro to Biology', '04', 'BIO'), 
 ('BIO3310', 'Genetics', '04', 'BIO');
 
