@@ -4,8 +4,11 @@
       --Raven */
 
 /* 1. List the IDs of all students, i.e. persons who have been enrolled in at least one section. */
-SELECT ID FROM Enrollment WHERE Section_identifier IS NOT NULL AND Class != '00';
+/*SELECT ID FROM Enrollment WHERE Section_identifier IS NOT NULL AND Class != '00';*/
+SELECT student_id FROM enrollment WHERE section_identifier IS NOT NULL;
 /* 2. List the IDs of all instructors, i.e. persons who have been listed as instructor in at least one section. */
-SELECT ID FROM Enrollment WHERE Section_identifier IS NOT NULL AND Class = '00';
+/*SELECT ID FROM Enrollment WHERE Section_identifier IS NOT NULL AND Class = '00';*/
+SELECT instructor_id FROM class_section WHERE section_identifier IS NOT NULL;
 /*3. List the names of all instructors. */
-SELECT Name FROM Person WHERE Class = '00';
+/*SELECT Name FROM Person WHERE Class = '00';*/
+SELECT Fname_Lname FROM person WHERE class_standing = 'Instructor';
