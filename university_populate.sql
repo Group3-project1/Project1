@@ -23,11 +23,11 @@ INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
 --Toni I edited your course table so it matches with the data that I have for the enrollment and section table. Jorge
 
 --Populate section table (Jorge)
-INSERT INTO class_section(course_number, semester, year, instructor_id) VALUES(“CS1310”, “Fall”, “2016”, 70),
-(“CS1310”, “Fall”, “2016”, 85), (“CS3320”, “Fall”, “2016”, 11), (“CS3320”, “Spring”, “2017”, 11),
-(“MATH2410”, “Fall”, “2016”, 46), (“MATH2410”, “Fall”, “2016”, 39),
-(“MATH2411”, “Fall”, “2016”, 84), (“MATH2411”, “Spring”, “2017”, 84), (“BIO1210”, “Fall”, “2016”, 23), 
-(“BIO1210”, “Spring”, “2017”, 23), (“BIO3310”, “Fall”, “2016”, 73), (“BIO3310”, “Fall”, “2016”, 72);
+INSERT INTO class_section(course_number, semester, year, instructor_id) VALUES
+(“CS1310”, “Fall”, “2016”, 111070), (“CS1310”, “Fall”, “2016”, 111085), (“CS3320”, “Fall”, “2016”, 111011), 
+(“CS3320”, “Spring”, “2017”, 111011), (“MATH2410”, “Fall”, “2016”, 111046), (“MATH2410”, “Fall”, “2016”, 111039),
+(“MATH2411”, “Fall”, “2016”, 111084), (“MATH2411”, “Spring”, “2017”, 111084), (“BIO1210”, “Fall”, “2016”, 111023), 
+(“BIO1210”, “Spring”, “2017”, 111023), (“BIO3310”, “Fall”, “2016”, 111073), (“BIO3310”, “Fall”, “2016”, 111072);
 
 --Populate enrollment table(Jorge)
 
