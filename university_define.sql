@@ -24,7 +24,7 @@ credit_hours VARCHAR(2),  --Better VARCHAR than INT?
 department VARCHAR(10), 
 PRIMARY KEY(course_number));
 
-CREATE TABLE section --jorge
+CREATE TABLE class_section --jorge
 (
 section_identifier int(10), 
 course_number varchar(15), 
@@ -42,7 +42,7 @@ grade char(3),
 foreign key(student_id) references persons(ID),
 foreign key(section_identifier) references section(section_identifier));
 
-CREATE TABLE prereq --jorge
+CREATE TABLE prerequisite --jorge
 (
 course_number varchar(15),
 prerequisite_number varchar(15),
