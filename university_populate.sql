@@ -12,12 +12,12 @@ UPDATE person SET major=null WHERE class_standing=”00”;
 
 --Poplulates course table
 INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
-('CS1310', 'Intro to Computer Science', 4, 'CS'),
-('CS3320', 'Data Structures', 4, 'CS'),
-('MATH2410', 'Discrete Mathematics', 4, 'MATH'),
-('MATH2411', 'Linear Algebra', 4, 'MATH'),
-('BIO1210', 'Intro to Biology', '04', 'BIO'), 
-('BIO3310', 'Genetics', '04', 'BIO');
+('CS1310', 'Intro to Computer Science', '4', 'CS'),
+('CS3320', 'Data Structures', '4', 'CS'),
+('MATH2410', 'Discrete Mathematics', '4', 'MATH'),
+('MATH2411', 'Linear Algebra', '4', 'MATH'),
+('BIO1210', 'Intro to Biology', '4', 'BIO'), 
+('BIO3310', 'Genetics', '4', 'BIO');
 
 
 --Toni I edited your course table so it matches with the data that I have for the enrollment and section table. Jorge
