@@ -40,7 +40,7 @@ student_id int(9),
 section_identifier int(10),
 grade char(3), 
 foreign key(student_id) references person(ID),
-foreign key(section_identifier) references section(section_identifier));
+foreign key(section_identifier) references class_section(section_identifier));
 
 CREATE TABLE prerequisite --jorge
 (
