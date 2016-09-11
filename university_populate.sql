@@ -15,4 +15,43 @@ INSERT INTO course(course_number, course_name, credit_hours, department) VALUES
 ('CS1310', 'Intro to Computer Science', 4, 'CS'),
 ('CS3320', 'Data Structures', 4, 'CS'),
 ('MATH2410', 'Discrete Mathematics', 4, 'MATH'),
-('CS3380', 'Database', 4, 'CS');
+('MATH2411', 'Linear Algebra', 4, 'MATH');
+('BIO1210', 'Intro to Biology', '04', 'BIO'), 
+('BIO3310', 'Genetics', '04', 'BIO');
+
+
+--Toni I edited your course table so it matches with the data that I have for the enrollment and section table. Jorge
+
+--Populate section table (Jorge)
+INSERT INTO section(course_number, semester, year, instructor_id) VALUES(“CS1310”, “Fall”, “2016”, 70),
+(“CS1310”, “Fall”, “2016”, 85), (“CS3320”, “Fall”, “2016”, 11), (“CS3320”, “Spring”, “2017”, 11),
+(“MATH2410”, “Fall”, “2016”, 46), (“MATH2410”, “Fall”, “2016”, 39),
+(“MATH2411”, “Fall”, “2016”, 84), (“MATH2411”, “Spring”, “2017”, 84), (“BIO1210”, “Fall”, “2016”, 23), 
+(“BIO1210”, “Spring”, “2017”, 23), (“BIO3310”, “Fall”, “2016”, 73), (“BIO3310”, “Fall”, “2016”, 72);
+
+--Populate enrollment table(Jorge)
+
+INSERT INTO enrollment(student_id, section_identifier, grade) VALUES(65, 10, 'A'), (53, 3, 'C'),  (12, 10, 'C'), (38, 1, 'C'),
+(83, 1, 'A'), (75, 1, 'B'), (59, 6, 'B'), (12, 6, 'C'), (49, 6, 'F'), (5, 10, 'C'), (74, 10, 'B'), (60, 9, 'B'), (76, 4, 'B'), 
+(96, 5, 'B'), (98, 10, 'A'), (1, 9, 'C'), (78, 1, 'A'), (18, 11, 'A'), (86, 11, 'C'), (10, 7, 'C'), (59, 7, 'B'),  (78, 3, 'F'), 
+(57, 9, 'C'), (56, 11, 'A'), (54, 10, 'B'), (57, 7, 'C'), (9, 11, 'F'), (25, 9, 'D'), (76, 2, 'B'), (29, 12, 'D'), (32, 2, 'C'), 
+(29, 4, 'A'), (16, 6, 'D'), (95, 11, 'C'), (57, 9, 'C'), (33, 8, 'C'),  (26, 8, 'F'), (82, 4, 'D'), (74, 10, 'B'), (93, 7, 'B'), 
+(64, 8, 'C'), (66, 2, 'B'), (9, 3, 'A'), (68, 7, 'A'), (50, 10, 'B'), (63, 2, 'C'), (4, 5, 'C'), (18, 2, 'D'), (62, 1, 'C'), 
+(49, 9, 'D'), (54, 7, 'B'), (80, 5, 'C'), (18, 5, 'C'), (25, 12, 'A'), (22, 1, 'B'), (89, 3, 'B'), (9, 11, 'F'), (4, 4, 'D'), 
+(89, 10, 'A'), (65, 11, 'B'), (5, 7, 'B'), (61, 2, 'C'), (77, 6, 'A'), (53, 1, 'A'), (30, 5, 'C'), (32, 1, 'B'), (4, 10, 'F'), 
+(62, 6, 'D'), (69, 1, 'B'), (25, 6, 'A'), (55, 9, 'A'), (86, 5, 'C'), (79, 9, 'C'), (49, 7, 'C'), (48, 3, 'B'), (42, 7, 'C'), 
+(4, 6, 'A'), (53, 5, 'B'), (66, 6, 'A'), (4, 9, 'D'), (80, 2, 'C'), (4, 3, 'C'), (18, 2, 'B'), (53, 2, 'C'), (52, 11, 'D'), 
+(68, 9, 'F'), (20, 1, 'A'), (63, 2, 'B'), (1, 8, 'A'), (59, 10, 'B'), (45, 1, 'C'), (83, 5, 'C'), (59, 4, 'B'), (31, 11, 'C'), 
+(66, 10, 'C'), (81, 7, 'D'), (53, 7, 'F'), (61, 11, 'B'), (46, 10, 'A'), (86, 2, 'C');
+
+--Update Statements so there are no duplicates students in a section. Since I generated everything randomly there where some duplicates.
+UPDATE enrollment SET student_id=95 WHERE student_id=63 LIMIT 1;
+UPDATE enrollment SET student_id=57 WHERE student_id=18 LIMIT 1;
+UPDATE enrollment SET student_id=3 WHERE student_id=4 LIMIT 1;
+UPDATE enrollment SET student_id=89 WHERE student_id=57 AND section_identifier=9 LIMIT 1;
+UPDATE enrollment SET student_id=24 WHERE student_id=74 AND section_identifier=10 LIMIT 1;
+UPDATE enrollment SET student_id=21 WHERE student_id=46 AND section_identifier=10 LIMIT 1;
+
+--Populate prerequisite Table
+
+INSERT INTO prereq(course_number, prerequisite_number) VALUES(“BIO3310”, “BIO1210”), (“CS3320”, “CS1310”)
