@@ -4,7 +4,7 @@
 
 USE toni_university; /* change name for running script */
 
-DROP TABLE IF EXISTS person, course, class_section, enrollment, prerequisite;
+DROP TABLE IF EXISTS prerequisite, enrollment, course, class_section, person;
 
 CREATE TABLE person
 (
@@ -18,23 +18,23 @@ ALTER TABLE person AUTO_INCREMENT=111000;
 
 CREATE TABLE course 
 (
-course_number VARCHAR(8), 
+course_number VARCHAR(8) NOT NULL, 
 course_name VARCHAR(25), 
-credit_hours VARCHAR(2),  --Better VARCHAR than INT?
+credit_hours VARCHAR(2),  /*Better VARCHAR than INT?*/
 department VARCHAR(10), 
 PRIMARY KEY(course_number));
 
-CREATE TABLE class_section --jorge
+CREATE TABLE class_section /*--jorge*/
 (
 section_identifier INT NOT NULL AUTO_INCREMENT, 
-course_number varchar(15), 
+course_numb varchar(15), 
 semester varchar(10), 
 year varchar(4), 
 instructor_id int(9), 
 primary key(section_identifier), 
 foreign key(instructor_id) references person(ID));
 
-CREATE TABLE enrollment --jorge
+CREATE TABLE enrollment /*--jorge*/
 (
 student_id int(9), 
 section_identifier int(10),
@@ -42,7 +42,7 @@ grade char(3),
 foreign key(student_id) references person(ID),
 foreign key(section_identifier) references class_section(section_identifier));
 
-CREATE TABLE prerequisite --jorge
+CREATE TABLE prerequisite /*--jorge*/
 (
 course_number varchar(15),
 prerequisite_number varchar(15),
