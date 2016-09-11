@@ -59,4 +59,4 @@ UPDATE enrollment SET student_id=111021 WHERE student_id=111046 AND section_iden
 
 --Populate prerequisite Table (jorge)
 
-INSERT INTO prerequisite(course_number, prerequisite_number) VALUES(“BIO3310”, “BIO1210”), (“CS3320”, “CS1310”)
+INSERT INTO prerequisite(course_number, prerequisite_number) VALUES(“BIO3310”, “BIO1210”), (“CS3320”, “CS1310”);
