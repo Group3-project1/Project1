@@ -1,3 +1,6 @@
+/* Group 3 Project 1 -- Raven, Claude, Jorge, Toni
+This will run queries and return the results
+*/
 
 use toni_university;
 
