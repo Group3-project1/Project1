@@ -12,3 +12,5 @@ SELECT instructor_id FROM class_section WHERE section_identifier IS NOT NULL;
 /*3. List the names of all instructors. */
 /*SELECT Name FROM Person WHERE Class = '00';*/
 SELECT Fname_Lname FROM person WHERE class_standing = 'Instructor';
+/*4. Query 4 */   
+SELECT Fname_Lname FROM person INNER JOIN enrollment ON person.ID = enrollment.student.id WHERE secton_identifier = ‘MATH2410’;
