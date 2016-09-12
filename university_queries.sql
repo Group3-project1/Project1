@@ -13,7 +13,7 @@ SELECT instructor_id FROM class_section WHERE section_identifier IS NOT NULL;
 /*SELECT Name FROM Person WHERE Class = '00';*/
 SELECT Fname_Lname FROM person WHERE class_standing = 'Instructor';
 /*4. Query 4, section iden */   
-SELECT Fname_Lname FROM person INNER JOIN enrollment ON person.ID = enrollment.student.id WHERE secton_identifier = ‘MATH2410’;
+SELECT Fname_Lname FROM person INNER JOIN enrollment ON person.ID = enrollment.student.id WHERE secton_identifier = ‘119’;
 /*5 Query 5 */
 SELECT student_id FROM enrollment WHERE grade IS NULL;
 /*6 Query 6 */
