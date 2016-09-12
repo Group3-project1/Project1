@@ -1,11 +1,9 @@
-/* this will be the insert statements */
-
-use toni_university/* your database name */;
-
-/*Populates person table with 100 random names. When I did my database I added Bio as a major. I don't know if you guys whant to stick with that
-or you gauys want to change it. My other tables also have bio classes and bio sections, including the enrollment table. 
--- jorge
+/* Group 3 Project 1 -- Raven, Claude, Jorge, Toni
+This will populate all of the tables for our schema
 */
+
+use toni_university;
+
 INSERT INTO person(FName_LName, major, class_standing) VALUES 
 ("Hugo Nash", "CS", '01'), 
 ("Betsy Stone", "MATH", '01'), 
